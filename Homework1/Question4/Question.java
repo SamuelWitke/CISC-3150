@@ -9,10 +9,12 @@ class Question {
 				double buff = input.nextDouble();
 				System.out.printf("%.2f\n",buff);
 			}
+			input.close();
 		}catch(IOException ex) {
 			System.out.println("IOException ");
 			ex.printStackTrace();
+		}catch(ArrayIndexOutOfBoundsException ex){
+			System.out.println("Run Program With The File Name");
 		}
-			
 	}
 }
