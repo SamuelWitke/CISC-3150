@@ -36,9 +36,7 @@ class Question {
 		for(int i=0;i<3;i++){
 			line = input.nextLine();
 			lineArr = line.split(",");
-			points[i] = new Point(
-								Integer.parseInt(lineArr[0]),Integer.parseInt(lineArr[1])
-							);
+			points[i] = new Point(Integer.parseInt(lineArr[0]),Integer.parseInt(lineArr[1]));
 		}
 		
 		triangle[0] = length(points[0],points[1]);
