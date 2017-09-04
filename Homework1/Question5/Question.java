@@ -32,7 +32,7 @@ class Question {
 		Point points[] = new Point[3];
 		double triangle[] = new double[3];
 
-		System.out.println(" Enter 3 2D Points Seperated By Comma ex. 2,3");
+		System.out.println(" Enter 3 2D Points Separated By Comma ex. 2,3");
 		for(int i=0;i<3;i++){
 			line = input.nextLine();
 			lineArr = line.split(",");
