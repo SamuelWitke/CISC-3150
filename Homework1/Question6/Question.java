@@ -23,6 +23,7 @@ class Question {
 		int y1 = centers[0].y;
 		int y2 = centers[1].y;
  		double distance = Math.sqrt(  Math.pow((x1-x2),2) + Math.pow((y1 - y2),2) );
+
 		//System.out.printf("%f, %d",distance,Math.abs(radii[0] + radii[1]));
 		if(x1 == x2 && y1 == y2 && radii[0] == radii[1]){
 			return " completely within";
