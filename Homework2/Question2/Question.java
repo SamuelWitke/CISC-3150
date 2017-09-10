@@ -25,15 +25,15 @@ class Question {
 	}
 
   	static void printMonthTitle(int year, String month) {
-    	System.out.printf( "|%23s,%d|\n",month,year);
-    	System.out.println("|----------------------------|");
-    	System.out.println("| Sun Mon Tue Wed Thu Fri Sat|");
+    	System.out.printf( "%23s,%d\n",month,year);
+    	System.out.println("----------------------------");
+    	System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
   	}
 
   	static int printMonthBody(int startDay, int numOfDaysInMonth) {
     	int i = 0;
     	for (i = 0; i < startDay; i++){
-      		System.out.print("   ");
+      		System.out.print("    ");
 		}
     	for (i = 1; i <= numOfDaysInMonth; i++) {
       		if (i < 10){
@@ -43,7 +43,7 @@ class Question {
         		System.out.printf("  %d",i);
 			}
       		if ((i + startDay) % 7 == 0){
-        		System.out.printf(" |\n");
+        		System.out.println();
 			}
     	}
     	System.out.println();
