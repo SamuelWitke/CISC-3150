@@ -1,19 +1,28 @@
 import java.util.*;
 class Question {
-	public static void main(String []args){
-		int row,temp,c,n;
+	public static void main(String []args) {
+		int n;
         Scanner s=new Scanner(System.in);
+		System.out.println("Enter Number");
         n=s.nextInt();
-        temp = n;
-        for ( row = 1 ; row <= n ; row++ ){
-        	for ( c = 1 ; c < temp ; c++ ){
-             	System.out.print(" ");
+		int j;
+		for(int i=1;i<=n;i++) {
+			j=1;
+			while(j<=(n-i)){
+				System.out.print("  ");
+				j++;
 			}
-            temp--;
-            for ( c = 1 ; c <= 2*row - 1 ; c++ ){
-            	System.out.printf("%d ",c);
+			j=1;
+			while(j<i+1){
+				System.out.printf("%d ",j);	
+				j++;
 			}
-            System.out.println("");
-       	}
+			j=i-1;
+			while(j >= 1){
+				System.out.printf("%d ",j);
+				j--;
+			}
+			System.out.println("");
+		}
 	}
 }
