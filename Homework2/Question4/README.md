@@ -2,6 +2,7 @@
 Figure out why the following two pieces of code produce different outputs. 
 MAKE SURE YOU CITE YOUR SOURCE FOR THE ANSWER TO THIS QUESTION.
 
+```java
 int x = 4282;
 for(int i=0;i<35;i++){
 	System.out.printf("%d\t\t%32s\n",i,Integer.toBinaryString(x>>>i);
@@ -14,3 +15,4 @@ for(int i=0;i<35;i++){
 	System.out.printf("%d\t\t%32s\n",i,Integer.toBinaryString(x));
 	x = x >>> i;
 }
+```
