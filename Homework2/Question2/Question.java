@@ -23,41 +23,50 @@ class Question {
 		}
 		
 	}
+
   	static void printMonthTitle(int year, String month) {
-    	System.out.printf("         %s,%d\n",month,year);
-    	System.out.println("-----------------------------");
-    	System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
+    	System.out.printf( "|%23s,%d|\n",month,year);
+    	System.out.println("|----------------------------|");
+    	System.out.println("| Sun Mon Tue Wed Thu Fri Sat|");
   	}
-  	/** Print month body */
+
   	static int printMonthBody(int startDay, int numOfDaysInMonth) {
-    	// Pad space before the first day of the month
     	int i = 0;
-    	for (i = 0; i < startDay; i++)
-      		System.out.print("    ");
+    	for (i = 0; i < startDay; i++){
+      		System.out.print("   ");
+		}
     	for (i = 1; i <= numOfDaysInMonth; i++) {
-      		if (i < 10)
+      		if (i < 10){
         		System.out.printf("   %d",i);
-      		else
+			}
+      		else{
         		System.out.printf("  %d",i);
-      		if ((i + startDay) % 7 == 0)
-        		System.out.println();
+			}
+      		if ((i + startDay) % 7 == 0){
+        		System.out.printf(" |\n");
+			}
     	}
     	System.out.println();
     	return (i+startDay-1)%7 ;
   	}
+
   	static String getMonth(int month) {
     	return new DateFormatSymbols().getMonths()[month-1];
 	} 
 
 	static int getMonthDays(int month,int year){
-		if (month == 4 || month == 6 || month == 9 || month == 11)
+		if (month == 4 || month == 6 || month == 9 || month == 11){
 			return 30;
-		else 
-			if (month == 2) 
+		}
+		else {
+			if (month == 2) {
 				return  (isLeapYear(year) ? 29 : 28);
-		else 
-			 return 31;
+			} else {
+				return 31;
+			}
+		}
 	}
+
 	static boolean isLeapYear(int year) {
 		if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))) {
 			return true;
