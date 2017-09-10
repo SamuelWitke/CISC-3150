@@ -6,11 +6,15 @@ class Question {
 		System.out.println("Enter Year");
 		int year = in.nextInt();
 		System.out.println("What day the first of January fell on ex, Su Mo Tu We Th Fr Sa");
-		//Calendar cal = Calendar.getInstance();
-		//cal.set(year,1,1);
-	   	//cal.setFirstDayOfWeek(Calendar.MONDAY);
-		//int startDay = cal.getFirstDayOfWeek()-1;
-		int startDay=1;
+		String dayBuff = in.next();
+		Map<String,Integer> numToDays = new HashMap<String,Integer>();
+		numToDays.put("Su",0);
+		numToDays.put("Mo",1);
+		numToDays.put("Tu",2);
+		numToDays.put("We",3);
+		numToDays.put("Th",4);
+		numToDays.put("Fr",5);
+		int startDay = numToDays.get(dayBuff);	
 		for(int i=1;i<=12;i++){
 			String month = getMonth(i);	
 			printMonthTitle(year,month);	
@@ -20,7 +24,7 @@ class Question {
 		
 	}
   	static void printMonthTitle(int year, String month) {
-    	System.out.printf("         %s,%d",month,year);
+    	System.out.printf("         %s,%d\n",month,year);
     	System.out.println("-----------------------------");
     	System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
   	}
