@@ -20,10 +20,11 @@ for(int i=0;i<35;i++){
 
 What is happening is since int is 32 bits you can only shift by a maximum of 31.     
 Taken from  Section 15.19 of JLS: "The shift distance actually used is therefore always in the range 0 to 31, inclusive."    
-
+<pre>
 x>>32 =                    1000010111010    
 x>>0  =                    1000010111010    
 x     =                    1000010111010    
+</pre>
 
 Hence   
 29		                               0  
