@@ -8,3 +8,18 @@ What is the N-Queens problem, you ask?
 
 Note: Backtracking is the easy way to do this. Try doing it with 
 arrays/loops instead.
+
+#Output
+Enter Size of Board
+4
+[1, 3, 0, 2]
+ 0  1  0  0 
+ 0  0  0  1 
+ 1  0  0  0 
+ 0  0  1  0 
+
+[2, 0, 3, 1]
+ 0  0  1  0 
+ 1  0  0  0 
+ 0  0  0  1 
+ 0  1  0  0
