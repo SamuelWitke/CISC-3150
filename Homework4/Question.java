@@ -46,7 +46,7 @@ public class Question {
      * It then counts the number of conflicts (attacks), 
      * and uses a heuristic to determine how to improve the placement of the queens. 
      * The 'minimum-conflicts' heuristic 
-	 * conflict(new−pos)≤conflict(old−pos)
+	 * conflict(new−pos1)!=conflict(old−pos2)
 	*/
 	static void printSolution(int arr[],int N){
 		System.out.println(Arrays.toString(arr));
@@ -62,6 +62,7 @@ public class Question {
 	System.out.println();
 	}
 	static boolean safe(int arr[],int col,int i){
+		//System.out.printf("col %d, i %d\n",col,i);
 		for(int j=0;j<col;j++){
 			if(arr[j] == i || Math.abs(arr[j] -i) == Math.abs(col-j))
 				return false;
