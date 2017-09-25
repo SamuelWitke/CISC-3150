@@ -10,6 +10,7 @@ Note: Backtracking is the easy way to do this. Try doing it with
 arrays/loops instead.
 
 #Output
+<pre>
 Enter Size of Board
 4
 [1, 3, 0, 2]
@@ -23,3 +24,4 @@ Enter Size of Board
  1  0  0  0 
  0  0  0  1 
  0  1  0  0
+</pre>
