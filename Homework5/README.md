@@ -18,4 +18,5 @@ Btw, this is known as the monte carlo method, if you wanna google stuff.
 
 
 #Output
-![alt tab](https://github.com/SamuelWitke/CISC-3150/blob/master/Homework5/image.png"Circle Map")
+![alt tab](https://github.com/SamuelWitke/CISC-3150/blob/master/Homework5/image.png)
+
