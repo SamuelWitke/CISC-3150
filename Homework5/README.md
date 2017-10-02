@@ -18,4 +18,4 @@ Btw, this is known as the monte carlo method, if you wanna google stuff.
 
 
 #Output
-![Alt text](/Users/sam/Desktop/image.png?raw=true "Circle Map")
+![alt tab]("Circle Map")
