@@ -9,10 +9,12 @@ import javax.swing.*;
 class GraphingData extends JPanel {
     public List<point>in;
 	public List<point>out;
+    public int size;
     final int PAD = 20;
- 	GraphingData(List in,List out){
+ 	GraphingData(List in,List out, int size){
 		this.in = in;
 		this.out = out;
+        this.size = size;
 		setBackground(Color.black);
 	}
     protected void paintComponent(Graphics g) {
@@ -22,17 +24,13 @@ class GraphingData extends JPanel {
 		g2.setPaint(Color.red);
 		int w = getWidth();
         int h = getHeight();
-        // Draw ordinate.
         g2.draw(new Line2D.Double(PAD, PAD, PAD, h-PAD));
-        // Draw abcissa.
         g2.draw(new Line2D.Double(PAD, h-PAD, w-PAD, h-PAD));
-        double xInc = (double)(w - 2*PAD)/(in.size()-1);
-        double scale = (double)(h - 2*PAD)/1;
-        // Mark data points.
+        double scale = (double)(h - 2*PAD)/size;
        	for(int i = 0; i < out.size(); i++) {
 			double x = PAD + scale*out.get(i).x;
 			double y = h - PAD - scale*out.get(i).y;
-			g2.fill(new Ellipse2D.Double(x-2, y-2, 4, 4));
+			g2.fill(new Ellipse2D.Double(x, y, 4, 4));
         }
 		g2.setPaint(Color.blue);
 		for(int i = 0; i < in.size(); i++) {
@@ -66,22 +64,21 @@ public class Question {
 	 * 
 	*/
 	public static boolean inCircle(point p,int lengthOfSquare){
-		double radius = Math.PI * Math.pow(lengthOfSquare,2) / 4;
-		return (Math.pow(p.x,2) + Math.pow(p.y,2) <= Math.pow(radius,2));
+		return (Math.pow(p.x,2) + Math.pow(p.y,2) <= Math.pow(lengthOfSquare,2));
 	}
 
 	public static point getRndDot(int lengthOfSquare){
 		Random rnd = new Random();
-		double x = (double)Math.round(lengthOfSquare * rnd.nextDouble()*100000d) / 100000d;
-		double y = (double)Math.round(lengthOfSquare * rnd.nextDouble()*100000d) / 100000d;
+		double x = lengthOfSquare * rnd.nextDouble();
+		double y = lengthOfSquare * rnd.nextDouble();
 		return new point(x,y);
 	}
 
-	public static void makeChart(List<point> in, List<point> out){
-		JFrame f = new JFrame();
+	public static void makeChart(List<point> in, List<point> out, int lengthOfSquare, double pi, long numOfCircle,long numOfDots) {
+		JFrame f = new JFrame("PI Estimate= "+pi+" Number in Cirlce "+ numOfCircle +" total "+numOfDots);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.add(new GraphingData(in,out));
-        f.setSize(400,400);
+        f.add(new GraphingData(in,out,lengthOfSquare));
+        f.setSize(800,800);
         f.setLocation(200,200);
         f.setVisible(true);
 	}
@@ -93,6 +90,7 @@ public class Question {
 		List<point> notInCircle = new ArrayList<point>();
 		for(int i=0;i<numberOfDots;i++){
 			point rndDot = getRndDot(lengthOfSquare);
+            //System.out.println(rndDot);
 			if(inCircle(rndDot,lengthOfSquare)){
 				inCircle.add(rndDot);
 				numberOfDotsInCircle++;
@@ -100,16 +98,16 @@ public class Question {
 				notInCircle.add(rndDot);
 			}
 		}
-		makeChart(inCircle,notInCircle);
-		piEstimate = (double) numberOfDotsInCircle / numberOfDots;
-		System.out.println(4*piEstimate);
+        System.out.printf("Numb in circle %d ",numberOfDotsInCircle);
+		piEstimate = 4*((double) numberOfDotsInCircle / numberOfDots);
+		System.out.println(piEstimate);
+		makeChart(inCircle,notInCircle,lengthOfSquare,piEstimate,numberOfDotsInCircle,numberOfDots);
 	}
 
 	public static void main(String ... args){
-		//Scanner in = new Scanner(System.in);
-		//System.out.println("Enter Amount Of Dots");
-		//long numberOfDots = in.nextLong();
-		long numberOfDots = 4000;
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter Amount Of Dots");
+		long numberOfDots = in.nextLong();
 		int lengthOfSquare = 1;	
 		monteCarlo(numberOfDots,lengthOfSquare);	
 	}

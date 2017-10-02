@@ -15,3 +15,7 @@ should get roughly the same ratio as the one you computed above. From
 there, you should be able to calculate the value of PI.
 
 Btw, this is known as the monte carlo method, if you wanna google stuff.
+
+
+#Output
+![Alt text](/Users/sam/Desktop/image.png?raw=true "Circle Map")
