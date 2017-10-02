@@ -17,6 +17,11 @@ there, you should be able to calculate the value of PI.
 Btw, this is known as the monte carlo method, if you wanna google stuff.
 
 
-#Output
+# Output
+<pre>
+Enter Amount Of Dots
+1000
+Numb in circle 766 3.064
+</pre>
 ![alt tab](https://github.com/SamuelWitke/CISC-3150/blob/master/Homework5/image.png)
 
