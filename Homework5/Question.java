@@ -101,7 +101,7 @@ public class Question {
         System.out.printf("Numb in circle %d ",numberOfDotsInCircle);
 		piEstimate = 4*((double) numberOfDotsInCircle / numberOfDots);
 		System.out.println(piEstimate);
-		makeChart(inCircle,notInCircle,lengthOfSquare,piEstimate,numberOfDotsInCircle,numberOfDots);
+		//makeChart(inCircle,notInCircle,lengthOfSquare,piEstimate,numberOfDotsInCircle,numberOfDots);
 	}
 
 	public static void main(String ... args){
