@@ -23,10 +23,10 @@ Object v = new Pet();
 System.out.println(v.call());
 	    
 Actual method called is (circle one): A, B, C, D, E, F, G, H, a method from class Object, Error!
-# Method A Called
+# Error! 
  
 This is an example of (circle all that apply): overriding/polymorphism, overloading, it-was-an-error!
-# overriding/polymorphism, 
+# it-was-an-error!
  
 # d) Consider the call:
 Pet p = new Pet();
