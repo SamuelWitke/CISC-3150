@@ -10,8 +10,10 @@ This is an example of (circle all that apply):  overriding/polymorphism, overloa
 
 
 # b) Consider the call:
+```java 
 Object c = new Cat();
 System.out.println(c);
+```
 	    
 Actual method called is (circle one): A, B, C, D, E, F, G, H, a method from class Object, Error!
 # Method G Called
@@ -21,9 +23,10 @@ This is an example of (circle all that apply): overriding/polymorphism, overload
 # overloading
 
 # c) Consider the call:
+```java 
 Object v = new Pet();
 System.out.println(v.call());
-	    
+```
 Actual method called is (circle one): A, B, C, D, E, F, G, H, a method from class Object, Error!
 # Error! 
  
@@ -31,9 +34,11 @@ This is an example of (circle all that apply): overriding/polymorphism, overload
 # it-was-an-error!
  
 # d) Consider the call:
+```java 
 Pet p = new Pet();
 System.out.println(p);
-	    
+```
+
 Actual method called is (circle one): A, B, C, D, E, F, G, H, a method from class Object, Error!
 # A method from class Object
  
@@ -41,8 +46,10 @@ This is an example of (circle all that apply): overriding/polymorphism, overload
 # overriding/polymorphism, 
  
 # e) Consider the call:
+```java 
 Pet q = new Dog();
 System.out.println(q.call());
+```
 	    
 Actual method called is (circle one): A, B, C, D, E, F, G, H, a method from class Object, Error!
 # Method C Called
@@ -52,8 +59,10 @@ This is an example of (circle all that apply): overriding/polymorphism, overload
 # overloading
  
 # f) Consider the call:
+```java 
 Cat t = new Cat();
 System.out.println(t.toString("Come here, kitty"));
+```
 	    
 Actual method called is (circle one): A, B, C, D, E, F, G, H, a method from class Object, Error!
 # Method C Called
@@ -64,8 +73,10 @@ This is an example of (circle all that apply): overriding/polymorphism, overload
  
  
 # g) Consider the call:
+```java 
 Cat u = new Cat();
 System.out.println(u.call(3));
+```
 	    
 Actual method called is (circle one): A, B, C, D, E, F, G, H, a method from class Object, Error!
 # Error!
@@ -74,8 +85,10 @@ This is an example of (circle all that apply): overriding/polymorphism, overload
 # it-was-an-error! 
 
 # h) Consider the call:
+```java 
 Dog e = new Dog();
 System.out.println(e.feet());
+```
 	    
 Actual method called is (circle one): A, B, C, D, E, F, G, H, a method from class Object, Error!
 # Method B Called
@@ -84,8 +97,10 @@ This is an example of (circle all that apply): overriding/polymorphism, overload
 # overriding/polymorphism, 
  
 # i) Consider the call:
+```java 
 Pet r = new Dog();
 System.out.println(r.call(3));
+```
 	    
 Actual method called is (circle one): A, B, C, D, E, F, G, H, a method from class Object, Error!
 # Error! 
