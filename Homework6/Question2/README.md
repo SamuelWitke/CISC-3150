@@ -1,6 +1,7 @@
 # a) Consider the call:
-Dog d = new Dog();
+<java> Dog d = new Dog();
 System.out.println(d.call(3));
+</java>
 Actual method called is (circle one): A, B, C, D, E, F, G, H, a method from class Object, Error!
 # Method E Called
 This is an example of (circle all that apply):  overriding/polymorphism, overloading, it-was-an-error!
