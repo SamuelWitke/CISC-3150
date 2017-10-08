@@ -1,5 +1,6 @@
 # a) Consider the call:
-```java Dog d = new Dog();
+```java 
+Dog d = new Dog();
 System.out.println(d.call(3));
 ```
 Actual method called is (circle one): A, B, C, D, E, F, G, H, a method from class Object, Error!
