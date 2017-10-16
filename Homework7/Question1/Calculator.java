@@ -33,9 +33,9 @@ class Calculator{
 	}
 
 	/** Evaluate a postfix notation expression */
-	public static int evaluateExpression(
+	public static double evaluateExpression(
 		String expression) throws Exception {
-		Stack<Integer> operandStack = new Stack<>();
+		Stack<Double> operandStack = new Stack<>();
 		expression = insertBlanks(expression);
 		String[] tokens = expression.split(" ");
 		for (String token: tokens) {
@@ -50,7 +50,7 @@ class Calculator{
 					processAnOperator(operandStack, token.charAt(0));
 			}
 			else if (Character.isDigit(token.charAt(0))){
-				operandStack.push(Integer.parseInt(token));
+				operandStack.push(Double.parseDouble(token));
 			}
 			else if (!Character.isLetter(token.charAt(0)))
 				throw new LookAtMrAlgebraOverHereException();
@@ -63,8 +63,8 @@ class Calculator{
 	/** Process one operator: Apply an operator 
 	  * to the operands in the stack */
 	public static void processAnOperator(
-			Stack<Integer> operandStack, char operator) throws Exception{
-		int op1=0,op2=0;
+			Stack<Double> operandStack, char operator) throws Exception{
+		double op1=0,op2=0;
 		try{
 			op1 = operandStack.pop();
 			op2 = operandStack.pop();
