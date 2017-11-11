@@ -39,6 +39,10 @@ class Calculator{
 		expression = insertBlanks(expression);
 		String[] tokens = expression.split(" ");
 		for (String token: tokens) {
+			if(token.charAt(0) == '(')
+				System.out.println(token);	
+		}
+		for (String token: tokens) {
 			if (token.length() == 0) // Blank space
 				continue; // Back to the while loop to extract the next token
 			else if (token.charAt(0) == '+' ||
