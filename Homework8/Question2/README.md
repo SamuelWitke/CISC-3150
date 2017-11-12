@@ -9,7 +9,7 @@ https://stackoverflow.com/questions/24571981/python-program-stops-in-command-lin
 ### Additionally 
 I wanted to see if a thread can be executed before 
 ```java 
-	public static void main(String args[]) 
+public static void main(String args[]) 
 ```
 what I found is that it can be done with semaphores and blockers but the reason 
 ```java 
@@ -21,7 +21,8 @@ If you run my example program you will find, that even through the
 static { ... }
 and 
 A(long start) { ... }
-``` is called before main the start process for
+``` 
+is called before main the start process for
 ```java 
 public static void main(String args[]) 
 ``` 
