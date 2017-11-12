@@ -32,9 +32,9 @@ void run { ...
 ``` 
 can be called. 
 <pre>
-In A Constructor time= 0.234919 ms
-In Static Block time= 7.572286847911E7ms to start
-In main thread 33.385052 ms
-In run thread 33.427396 ms
-In main end 33.781501 ms
+In A Constructor time= 0.263246 ms
+In Static Block time= 7.5792729985148E7 ms
+In main thread 33.327014 ms
+In run thread 33.369398 ms
+In main end 33.597401 ms
 </pre>

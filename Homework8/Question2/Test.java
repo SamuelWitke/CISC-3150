@@ -10,7 +10,7 @@ class Test {
 		//t = new Thread(new A(latch));
 		start = System.nanoTime();
 		t = new Thread(new A(start));
-		System.out.println("In Static Block time= "+(start/1e6)+ "ms to start");
+		System.out.println("In Static Block time= "+(start/1e6)+ " ms");
 		t.start();
 	}
 	public static void main(String ...args) {
