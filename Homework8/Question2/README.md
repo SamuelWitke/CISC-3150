@@ -22,7 +22,7 @@ static { ... }
 and 
 A(long start) { ... }
 ``` 
-is called before main the start process for
+is called before main, the start process for
 ```java 
 public static void main(String args[]) 
 ``` 
