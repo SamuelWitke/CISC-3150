@@ -31,10 +31,11 @@ happens before the thread method
 void run { ... 
 ``` 
 can be called. 
+#### Output
 <pre>
-In A Constructor time= 0.263246 ms
-In Static Block time= 7.5792729985148E7 ms
-In main thread 33.327014 ms
-In run thread 33.369398 ms
-In main end 33.597401 ms
+In Static Block time= 0.00526 ms
+In A Constructor time= 39.963317 ms
+In main thread 40.545737 ms
+In run thread 40.57968 ms
+In main end 40.819822 ms
 </pre>
