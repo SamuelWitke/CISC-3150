@@ -12,15 +12,21 @@ I wanted to see if a thread can be executed before
 	public static void main(String args[]) 
 ```
 what I found is that it can be done with semaphores and blockers but the reason 
-```java public static void main(String args[]) 
-``` is called before any threads is due to the thread start up process taking time. 
-If you run my example program you will find, that even through the 
-```java 
-static { ... 
-``` is called before main the start running process for
 ```java 
 public static void main(String args[]) 
-```  happens before a thread 
+``` 
+is called before any threads is due to the thread start up process taking time. 
+If you run my example program you will find, that even through the 
+```java 
+static { ... }
+and 
+A(long start) { ... }
+``` is called before main the start process for
+```java 
+public static void main(String args[]) 
+``` 
+happens before the thread method 
 ```java 
 void run { ... 
-``` can be called. 
+``` 
+can be called. 
